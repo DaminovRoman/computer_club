@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Neon Nexus — Игровое пространство нового поколения</title>
+<meta name="description" content="Neon Nexus — закрытое технологичное пространство в центре города. Свет, звук и производительность объединены в одном месте. Бронирование игровых зон, VIP-комнат и турнирной сцены.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neon Nexus — Игровое пространство нового поколения">
+<meta property="og:description" content="Технологии, свет, звук и производительность объединены в одном месте. Забронируйте место в Neon Nexus.">
+<meta property="og:image" content="https://neonnexus.club/og-cover.jpg">
+<meta property="og:url" content="https://neonnexus.club">
+<meta property="og:locale" content="ru_RU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Neon Nexus — Игровое пространство нового поколения">
+<meta name="twitter:description" content="Технологии, свет, звук и производительность объединены в одном месте.">
+
+<meta name="theme-color" content="#0A0B0D">
+<link rel="canonical" href="https://neonnexus.club">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+<link rel="preload" as="style" href="NeonNexus.css">
+<link rel="stylesheet" href="NeonNexus.css">
+
+<!-- Schema.org: LocalBusiness / SportsActivityLocation -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Neon Nexus",
+  "description": "Закрытое технологичное игровое пространство премиум-класса с индивидуальными игровыми зонами, VIP-комнатами и турнирной сценой.",
+  "image": "https://neonnexus.club/og-cover.jpg",
+  "url": "https://neonnexus.club",
+  "telephone": "+7-000-000-00-00",
+  "priceRange": "₽₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Примерная, 1",
+    "addressLocality": "Москва",
+    "addressCountry": "RU"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"],
+      "opens": "10:00",
+      "closes": "02:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "06:00"
+    }
+  ],
+  "sameAs": [
+    "https://t.me/neonnexus",
+    "https://instagram.com/neonnexus"
+  ]
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Нужно ли бронировать место заранее?",
+      "acceptedAnswer": { "@type": "Answer", "text": "В будни свободные станции обычно есть без брони. По пятницам, субботам и во время турниров рекомендуем бронировать через сайт или Telegram минимум за несколько часов." }
+    },
+    {
+      "@type": "Question",
+      "name": "Что входит в почасовую аренду?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Станция, периферия, доступ к библиотеке игр и напитки на баре. VIP-комнаты и абонементы включают дополнительные условия — подробности в разделе тарифов." }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли прийти одному?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Да. Часть станций расположена в общей зоне для одиночных сессий, часть — в закрытых кластерах для команд до пяти человек." }
+    },
+    {
+      "@type": "Question",
+      "name": "Как устроена вентиляция и температура в зале?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Каждый кластер станций находится в независимом контуре вентиляции с постоянным контролем температуры и влажности — оборудование и гости не мешают друг другу." }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли турниры для новичков?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Да, регулярные отборочные проходят в открытых дивизионах. Расписание турниров — в Telegram-канале и в разделе тарифов." }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Neon Nexus", "item": "https://neonnexus.club" },
+    { "@type": "ListItem", "position": 2, "name": "Игровые зоны", "item": "https://neonnexus.club#zones" },
+    { "@type": "ListItem", "position": 3, "name": "Тарифы", "item": "https://neonnexus.club#rates" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Ambient background system: persists across whole page, not a section -->
+<div class="ambient" aria-hidden="true">
+  <div class="ambient__field"></div>
+  <div class="ambient__grid"></div>
+  <div class="spotlight" id="spotlight"></div>
+</div>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__mark" aria-label="Neon Nexus — на главную">
+      <span class="nav__mark-glyph" aria-hidden="true">◆</span>
+      <span class="nav__mark-text">Neon Nexus</span>
+    </a>
+    <nav class="nav__links" aria-label="Основная навигация">
+      <a href="#philosophy">Философия</a>
+      <a href="#zones">Зоны</a>
+      <a href="#stations">Станции</a>
+      <a href="#rates">Тарифы</a>
+      <a href="#space">Пространство</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#booking" class="btn btn--ghost nav__cta">Забронировать</a>
+    <button class="nav__burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav__mobile" id="navMobile">
+  <a href="#philosophy">Философия</a>
+  <a href="#zones">Зоны</a>
+  <a href="#stations">Станции</a>
+  <a href="#rates">Тарифы</a>
+  <a href="#space">Пространство</a>
+  <a href="#faq">Вопросы</a>
+  <a href="#booking" class="btn btn--solid">Забронировать место</a>
+</div>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top">
+    <img class="hero__photo" src="img/1.png" alt="" aria-hidden="true">
+    
+
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow reveal-up">Закрытое пространство · Центр города</p>
+      <h1 class="hero__title">
+        <span class="reveal-line"><span class="reveal-line__inner">Игровое пространство</span></span>
+        <span class="reveal-line"><span class="reveal-line__inner">нового поколения.</span></span>
+      </h1>
+      <p class="hero__subtitle reveal-up">Технологии, свет, звук и производительность объединены в одном месте.</p>
+      <div class="hero__actions reveal-up">
+        <a href="#booking" class="btn btn--solid magnetic">Забронировать место</a>
+        <a href="#zones" class="btn btn--outline magnetic">Исследовать клуб</a>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- 2. PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Философия пространства</p>
+        <h2 class="reveal-up">Пространство спроектировано, а не обставлено.</h2>
+      </div>
+
+      <div class="philosophy__grid">
+        <article class="phil-card glass reveal-up" data-tilt>
+          <div class="phil-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4c8 0 14 6 14 14 0 6-3 9-6 12-2 2-3 4-3 7h-10c0-3-1-5-3-7-3-3-6-6-6-12 0-8 6-14 14-14z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M19 40h10M21 44h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Освещение</h3>
+          <p>Каждая зона откалибрована под свою задачу: холодный свет для точности в шутерах, тёплый — для долгих сессий в RPG. Яркость меняется вместе с временем суток за окном.</p>
+        </article>
+
+        <article class="phil-card glass reveal-up" data-tilt>
+          <div class="phil-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M24 4v10M24 34v10M4 24h10M34 24h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="1"/></svg></div>
+          <h3>Акустика</h3>
+          <p>Звукопоглощающие панели в стенах и потолке убирают эхо и посторонний гул, оставляя только то, что происходит в игре — без наушников это тоже слышно.</p>
+        </article>
+
+        <article class="phil-card glass reveal-up" data-tilt>
+          <div class="phil-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="14" width="32" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 34v6h16v-6" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3>Эргономика</h3>
+          <p>Кресла и столы регулируются под рост и позу за секунды. Плечи, запястья и взгляд остаются в естественном положении и на второй, и на пятый час.</p>
+        </article>
+
+        <article class="phil-card glass reveal-up" data-tilt>
+          <div class="phil-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>Атмосфера</h3>
+          <p>Материалы, звук шагов, температура воздуха — всё продумано так, чтобы вход в клуб ощущался как переход в другое пространство, а не просто открытая дверь.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. GAME ZONES -->
+  <section class="zones" id="zones">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Игровые зоны</p>
+        <h2 class="reveal-up">Четыре пространства. Четыре сценария игры.</h2>
+      </div>
+    </div>
+
+    <div class="zone-list">
+      <article class="zone" data-zone="arena">
+        <div class="zone__visual" aria-hidden="true">
+          <img class="zone__photo" src="img/2.png" alt="">
+          <div class="zone__scrim"></div>
+          <div class="zone__glow"></div>
+          <div class="zone__grid-lines"></div>
+        </div>
+        <div class="zone__content container">
+          <span class="zone__index">01</span>
+          <h3>Арена</h3>
+          <p>Открытый кластер из четырнадцати станций для соревновательных дисциплин. Синхронизированная задержка сети между всеми местами — важно, когда решает миллисекунда.</p>
+          <ul class="zone__tags">
+            <li>360Hz мониторы</li>
+            <li>Проводная периферия</li>
+            <li>Общий обзор сцены</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="zone" data-zone="capsule">
+        <div class="zone__visual" aria-hidden="true">
+          <img class="zone__photo" src="img/3.png" alt="">
+          <div class="zone__scrim"></div>
+          <div class="zone__glow"></div>
+          <div class="zone__grid-lines"></div>
+        </div>
+        <div class="zone__content container">
+          <span class="zone__index">02</span>
+          <h3>Капсулы</h3>
+          <p>Индивидуальные закрытые модули с собственным контуром света и звука. Для тех, кому важна полная концентрация без периферийного шума зала.</p>
+          <ul class="zone__tags">
+            <li>Звукоизоляция 360°</li>
+            <li>Персональный свет</li>
+            <li>Раздельная вентиляция</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="zone" data-zone="squad">
+        <div class="zone__visual" aria-hidden="true">
+          <img class="zone__photo" src="img/4.png" alt="">
+          <div class="zone__scrim"></div>
+          <div class="zone__glow"></div>
+          <div class="zone__grid-lines"></div>
+        </div>
+        <div class="zone__content container">
+          <span class="zone__index">03</span>
+          <h3>Отряд</h3>
+          <p>Кластеры на пять станций за полупрозрачными перегородками — команда видит и слышит друг друга напрямую, а не через голосовой чат.</p>
+          <ul class="zone__tags">
+            <li>До 5 мест</li>
+            <li>Общий стол координации</li>
+            <li>Своя дверь</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="zone" data-zone="vip">
+        <div class="zone__visual" aria-hidden="true">
+          <img class="zone__photo" src="img/5.png" alt="">
+          <div class="zone__scrim"></div>
+          <div class="zone__glow"></div>
+          <div class="zone__grid-lines"></div>
+        </div>
+        <div class="zone__content container">
+          <span class="zone__index">04</span>
+          <h3>Приват</h3>
+          <p>Отдельная комната с собственным входом, баром и сценой для стрима. Свет и звук настраиваются под конкретное событие за несколько минут.</p>
+          <ul class="zone__tags">
+            <li>Отдельный вход</li>
+            <li>Стрим-сцена</li>
+            <li>Настройка под событие</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. STATIONS -->
+  <section class="stations" id="stations">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Станции</p>
+        <h2 class="reveal-up">Один стандарт оборудования. Ноль компромиссов.</h2>
+      </div>
+
+      <div class="station-showcase reveal-up">
+        <div class="station-showcase__visual">
+          <div class="station-frame glass">
+            <div class="station-frame__glow" aria-hidden="true"></div>
+            <div class="station-frame__specs">
+              <div class="spec-row"><span>Монитор</span><span>27″ · 360Hz · OLED</span></div>
+              <div class="spec-row"><span>Клавиатура</span><span>Механическая · Проводная</span></div>
+              <div class="spec-row"><span>Мышь</span><span>Оптическая · 26000 DPI</span></div>
+              <div class="spec-row"><span>Наушники</span><span>Открытая акустика · Студийные</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="station-showcase__data">
+          <div class="fps-panel glass">
+            <h3>Средний FPS</h3>
+            <div class="fps-row">
+              <span class="fps-row__game">Valorant</span>
+              <div class="fps-row__bar"><span style="--w:96%"></span></div>
+              <span class="fps-row__num" data-count="380">0</span>
+            </div>
+            <div class="fps-row">
+              <span class="fps-row__game">CS2</span>
+              <div class="fps-row__bar"><span style="--w:90%"></span></div>
+              <span class="fps-row__num" data-count="340">0</span>
+            </div>
+            <div class="fps-row">
+              <span class="fps-row__game">Cyberpunk 2077</span>
+              <div class="fps-row__bar"><span style="--w:60%"></span></div>
+              <span class="fps-row__num" data-count="165">0</span>
+            </div>
+            <div class="fps-row">
+              <span class="fps-row__game">Apex Legends</span>
+              <div class="fps-row__bar"><span style="--w:75%"></span></div>
+              <span class="fps-row__num" data-count="240">0</span>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY THEY RETURN -->
+  <section class="reasons" id="reasons">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Почему возвращаются именно сюда</p>
+        <h2 class="reveal-up">Не обещания. Технические факты.</h2>
+      </div>
+
+      <div class="reasons__grid">
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">&lt;3мс</span>
+          <p>задержка до игровых серверов благодаря выделенному оптическому каналу</p>
+        </div>
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">360°</span>
+          <p>звукоизоляция в закрытых капсулах — зал не слышен, зал не слышит вас</p>
+        </div>
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">1 к 1</span>
+          <p>настройка яркости, цветовой температуры и высоты кресла под каждого гостя</p>
+        </div>
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">24ч</span>
+          <p>цикл диагностики оборудования — станция проверяется каждый день, а не раз в неделю</p>
+        </div>
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">4</span>
+          <p>независимых контура вентиляции — температура не растёт даже при полном зале</p>
+        </div>
+        <div class="reason-item reveal-up">
+          <span class="reason-item__num">100%</span>
+          <p>проводная периферия на соревновательных станциях — без задержки радиоканала</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. RATES -->
+  <section class="rates" id="rates">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Тарифы</p>
+        <h2 class="reveal-up">Формат под каждый сценарий вечера.</h2>
+      </div>
+
+      <div class="rates__grid">
+        <article class="rate-card glass reveal-up">
+          <h3>Почасовая аренда</h3>
+          <p class="rate-card__desc">Открытая арена, свободные станции, оплата за фактическое время.</p>
+          <div class="rate-card__price">от 250 ₽<span>/час</span></div>
+          <ul class="rate-card__list">
+            <li>Любая свободная станция</li>
+            <li>Доступ к библиотеке игр</li>
+            <li>Без предоплаты</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline btn--full magnetic">Выбрать</a>
+        </article>
+
+        <article class="rate-card glass rate-card--featured reveal-up">
+          <span class="rate-card__badge">Популярный выбор</span>
+          <h3>Ночной пакет</h3>
+          <p class="rate-card__desc">С 23:00 до 8:00. Фиксированная станция, минимум формальностей.</p>
+          <div class="rate-card__price">от 1400 ₽<span>/ночь</span></div>
+          <ul class="rate-card__list">
+            <li>Закреплённая станция</li>
+            <li>Бесплатные напитки на баре</li>
+            <li>Приоритет на капсулы</li>
+          </ul>
+          <a href="#booking" class="btn btn--solid btn--full magnetic">Выбрать</a>
+        </article>
+
+        <article class="rate-card glass reveal-up">
+          <h3>VIP-комната</h3>
+          <p class="rate-card__desc">Приватное пространство для команды до пяти человек со своим входом.</p>
+          <div class="rate-card__price">от 3500 ₽<span>/час</span></div>
+          <ul class="rate-card__list">
+            <li>Отдельный вход и бар</li>
+            <li>Настройка света под запрос</li>
+            <li>Стрим-сцена включена</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline btn--full magnetic">Выбрать</a>
+        </article>
+
+        <article class="rate-card glass reveal-up">
+          <h3>Абонемент</h3>
+          <p class="rate-card__desc">Фиксированные часы каждый месяц по неизменной цене.</p>
+          <div class="rate-card__price">от 6900 ₽<span>/мес</span></div>
+          <ul class="rate-card__list">
+            <li>30 часов в месяц</li>
+            <li>Перенос неиспользованных часов</li>
+            <li>Ранняя запись на турниры</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline btn--full magnetic">Выбрать</a>
+        </article>
+
+        <article class="rate-card glass reveal-up">
+          <h3>Турниры</h3>
+          <p class="rate-card__desc">Регулярные отборочные на арене с призовым фондом и стримом.</p>
+          <div class="rate-card__price">от 500 ₽<span>/участие</span></div>
+          <ul class="rate-card__list">
+            <li>Открытые дивизионы</li>
+            <li>Прямая трансляция</li>
+            <li>Призовой фонд</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline btn--full magnetic">Выбрать</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Голоса гостей</p>
+        <h2 class="reveal-up">Их слова, не наши.</h2>
+      </div>
+
+      <div class="testimonial-carousel reveal-up" id="testimonialCarousel">
+        <div class="testimonial-track" id="testimonialTrack">
+          <article class="testimonial glass">
+            <p class="testimonial__quote">«Пришёл на разовую сессию три месяца назад. Теперь тут закреплённое место по пятницам — просто перестал искать альтернативы.»</p>
+            <div class="testimonial__author"><span class="testimonial__name">Артём К.</span><span class="testimonial__role">Постоянный гость · капсулы</span></div>
+          </article>
+          <article class="testimonial glass">
+            <p class="testimonial__quote">«Разница чувствуется в первые пять минут — не по картинке, а по тому, как реагирует мышь и монитор. Дальше уже не замечаешь оборудование вообще.»</p>
+            <div class="testimonial__author"><span class="testimonial__name">Дарья В.</span><span class="testimonial__role">Соревновательный игрок · Арена</span></div>
+          </article>
+          <article class="testimonial glass">
+            <p class="testimonial__quote">«Брали VIP-комнату на день рождения командой в шесть человек. Свет под наш плейлист подстроили за десять минут без вопросов.»</p>
+            <div class="testimonial__author"><span class="testimonial__name">Максим П.</span><span class="testimonial__role">Гость · Приват</span></div>
+          </article>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Выбор отзыва"></div>
+    </div>
+  </section>
+
+  <!-- 8. THE SPACE -->
+  <section class="space" id="space">
+    <div class="space__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head--light">
+        <p class="eyebrow reveal-up">Пространство клуба</p>
+        <h2 class="reveal-up">Клуб не заканчивается на игровых станциях.</h2>
+      </div>
+
+      <div class="space__grid">
+        <article class="space-card glass reveal-up">
+          <img class="space-card__photo" src="img/6.png" alt="Лаунж-зона">
+          <h3>Лаунж-зона</h3>
+          <p>Место между сессиями — низкие диваны, приглушённый свет, разговор без необходимости кричать.</p>
+        </article>
+        <article class="space-card glass reveal-up">
+          <img class="space-card__photo" src="img/7.png" alt="Бар">
+          <h3>Бар</h3>
+          <p>Напитки и лёгкая кухня подаются прямо к станции — сессия не прерывается ради похода к кассе.</p>
+        </article>
+        <article class="space-card glass reveal-up">
+          <img class="space-card__photo" src="img/8.png" alt="Приватные комнаты">
+          <h3>Приватные комнаты</h3>
+          <p>Закрытые пространства для дней рождения, корпоративных турниров и командных сборов.</p>
+        </article>
+        <article class="space-card glass reveal-up">
+          <img class="space-card__photo" src="img/9.png" alt="Турнирная сцена">
+          <h3>Турнирная сцена</h3>
+          <p>Отдельный подиум со своим светом и звуком для финалов и showmatch-игр со зрителями.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up">Частые вопросы</p>
+        <h2 class="reveal-up">Коротко о том, что обычно спрашивают.</h2>
+      </div>
+
+      <div class="faq-accordion reveal-up">
+        <div class="faq-item glass">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Нужно ли бронировать<br> место заранее?</span>
+            <span class="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-item__a">
+            <p>В будни свободные станции обычно есть без брони. По пятницам, субботам и во время турниров рекомендуем бронировать через сайт или Telegram минимум за несколько часов.</p>
+          </div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Что входит в почасовую аренду?</span>
+            <span class="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Станция, периферия, доступ к библиотеке игр и напитки на баре. VIP-комнаты и абонементы включают дополнительные условия — подробности в разделе тарифов.</p>
+          </div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Можно ли прийти одному?</span>
+            <span class="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Да. Часть станций расположена в общей зоне для одиночных сессий, часть — в закрытых кластерах для команд до пяти человек.</p>
+          </div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Как устроена вентиляция и температура в зале?</span>
+            <span class="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Каждый кластер станций находится в независимом контуре вентиляции с постоянным контролем температуры и влажности — оборудование и гости не мешают друг другу.</p>
+          </div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Есть ли турниры для новичков?</span>
+            <span class="faq-item__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Да, регулярные отборочные проходят в открытых дивизионах. Расписание турниров — в Telegram-канале и в разделе тарифов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA / BOOKING FORM -->
+  <section class="final-cta" id="booking">
+    <div class="final-cta__bg" aria-hidden="true"></div>
+    <div class="container final-cta__content">
+      <h2 class="reveal-up">Следующая игровая сессия начинается здесь.</h2>
+      <p class="final-cta__subtitle reveal-up">Оставьте заявку — мы свяжемся и подберём станцию или комнату под ваше время.</p>
+
+      <form class="booking-form glass reveal-up" id="bookingForm" novalidate>
+        <div class="booking-form__row">
+          <div class="booking-form__field">
+            <label for="bookingName">Имя</label>
+            <input type="text" id="bookingName" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+          </div>
+          <div class="booking-form__field">
+            <label for="bookingPhone">Телефон</label>
+            <input type="tel" id="bookingPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="booking-form__row">
+          <div class="booking-form__field">
+            <label for="bookingFormat">Формат</label>
+            <select id="bookingFormat" name="format" required>
+              <option value="" disabled selected>Выберите формат</option>
+              <option value="hourly">Почасовая аренда</option>
+              <option value="night">Ночной пакет</option>
+              <option value="vip">VIP-комната</option>
+              <option value="subscription">Абонемент</option>
+              <option value="tournament">Турнир</option>
+            </select>
+          </div>
+          <div class="booking-form__field">
+            <label for="bookingDate">Дата и время</label>
+            <input type="datetime-local" id="bookingDate" name="datetime" required>
+          </div>
+        </div>
+
+        <div class="booking-form__field booking-form__field--full">
+          <label for="bookingComment">Комментарий <span>· необязательно</span></label>
+          <textarea id="bookingComment" name="comment" rows="2" placeholder="Количество гостей, пожелания по станции или свету"></textarea>
+        </div>
+
+        <div class="booking-form__actions">
+          <button type="submit" class="btn btn--solid btn--large magnetic">Забронировать</button>
+          <a href="#contacts" class="btn btn--outline btn--large magnetic">Связаться иначе</a>
+        </div>
+
+        <p class="booking-form__status" id="bookingFormStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- 11. CONTACTS -->
+<footer class="contacts" id="contacts">
+  <div class="container">
+    <div class="contacts__grid">
+      <div class="contacts__info">
+        <a href="#top" class="nav__mark nav__mark--footer">
+          <span class="nav__mark-glyph" aria-hidden="true">◆</span>
+          <span class="nav__mark-text">Neon Nexus</span>
+        </a>
+        <p class="contacts__address">ул. Примерная, 1, Москва<br>Открыто ежедневно · Пт–Сб до 6:00</p>
+        <a href="tel:+70000000000" class="contacts__phone">+7 (000) 000-00-00</a>
+      </div>
+
+      <div class="contacts__links">
+        <h4>Связь</h4>
+        <a href="https://t.me/neonnexus" target="_blank" rel="noopener">Telegram</a>
+        <a href="#" target="_blank" rel="noopener">Discord</a>
+        <a href="mailto:hello@neonnexus.club">hello@neonnexus.club</a>
+      </div>
+
+      <div class="contacts__links">
+        <h4>Соцсети</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">VK</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+      </div>
+
+      <div class="contacts__map glass" role="img" aria-label="Карта расположения клуба Neon Nexus">
+        <div class="contacts__map-pin" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="contacts__bottom">
+      <span>© 2026 Neon Nexus</span>
+      <span>Технологии, свет, звук и производительность — в одном месте</span>
+    </div>
+  </div>
+</footer>
+
+<script src="NeonNexus.js" defer></script>
+</body>
+</html>
